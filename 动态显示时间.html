@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>动态显示时间</title>
+</head>
+<style>
+  .date {
+    width: 400px;
+    margin: 100px auto 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .time {
+    width: 400px;
+    margin: 20px auto;
+    display: flex;
+  }
+
+  .year, .month, .day {
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 100px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: orange;
+  }
+
+  .hour, .minute, .second {
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 100px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: orange;
+  }
+
+  .desc {
+    text-align: center;
+    line-height: 100px;
+    flex-grow: 1;
+  }
+</style>
+<body>
+  <div class="date">
+    <div class="year"></div>
+    <div class="desc">年</div>
+    <div class="month"></div>
+    <div class="desc">月</div>
+    <div class="day"></div>
+    <div class="desc">日</div>
+  </div>
+  <div class="time">
+    <div class="hour"></div>
+    <div class="desc">时</div>
+    <div class="minute"></div>
+    <div class="desc">分</div>
+    <div class="second"></div>
+    <div class="desc">秒</div>
+  </div>
+</body>
+
+<script>
+  // 获取当前时间
+  let now = new Date();
+  let year = now.getFullYear();
+  let month = now.getMonth() + 1;
+  let day = now.getDate();
+  let hour = now.getHours();
+  let minute = now.getMinutes();
+  let second = now.getSeconds();
+
+  // 获取DOM节点
+  let yearNode = document.querySelector(".year");
+  let monthNode = document.querySelector(".month");
+  let dayNode = document.querySelector(".day");
+  let hourNode = document.querySelector(".hour");
+  let minuteNode = document.querySelector(".minute");
+  let secondNode = document.querySelector(".second");
+
+  // 讲时间写入节点
+  yearNode.innerHTML = year;
+  monthNode.innerHTML = month < 10 ? "0" + month : month;
+  dayNode.innerHTML = day < 10 ? "0" + day : day;
+  hourNode.innerHTML = hour < 10 ? "0" + hour : hour;
+  minuteNode.innerHTML = minute < 10 ? "0" + minute : minute;
+  secondNode.innerHTML= second < 10 ? "0" + second : second;
+
+  function updateTime() {
+    now = new Date();
+    hour = now.getHours();
+    minute = now.getMinutes();
+    second = now.getSeconds();
+
+    hourNode.innerHTML = hour < 10 ? "0" + hour : hour;
+    minuteNode.innerHTML = minute < 10 ? "0" + minute : minute;
+    secondNode.innerHTML= second < 10 ? "0" + second : second;
+
+    if(hour === 0 && minute === 0 && second === 0) {
+      day = now.getDate();
+      month = now.getMonth() + 1;
+      year = now.getFullYear();
+      dayNode.innerHTML = day < 10 ? "0" + (day + 1) : (day + 1);
+      monthNode.innerHTML = month < 10 ? "0" + month : month;
+    }
+
+    const interval = 1000- now.getMilliseconds();
+    setTimeout(updateTime, interval);
+  }
+
+  updateTime();
+</script>
+</html>
