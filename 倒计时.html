@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>倒计时</title>
+</head>
+<style>
+  .clock {
+    display: flex;
+    width: 350px;
+    height: 100px;
+    margin: 100px auto;
+    justify-content: space-between;
+  }
+
+  .clock .hour, .clock .minute, .clock .second {
+    width: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: orange;
+    border-radius: 20px;
+    color: #fff;
+  }
+
+  .colon {
+    font-weight: bold;
+    line-height: 100px;
+    text-align: center;
+    color: orange;
+    font-size: 50px;
+    flex-grow: 1;
+  }
+
+
+</style>
+<body>
+  <div class="clock">
+    <div class="hour">01</div>
+    <div class="colon">:</div>
+    <div class="minute">01</div>
+    <div class="colon">:</div>
+    <div class="second">10</div>
+  </div>
+
+  <script>
+    let countHour = prompt("请输入小时数");
+    let countMin = prompt("请输入分钟数");
+    let countSec = prompt("请输入秒数");
+
+    let secondNode = document.querySelector(".second");
+    secondNode.innerHTML = countSec < 10 ? "0" + countSec : countSec;
+
+
+    let minuteNode = document.querySelector(".minute");
+    minuteNode.innerHTML = countMin < 10 ? "0" + countMin : countMin;
+
+    let hourNode = document.querySelector(".hour");
+    hourNode.innerHTML = countHour < 10 ? "0" + countHour : countHour;
+
+    // 创建一个间隔1秒的计时器
+    let intervalId = setInterval(() => {
+      // 每隔1秒秒数减1
+      countSec--;
+      if (countSec < 10) {
+        secondNode.innerHTML = "0" + countSec;
+      } else {
+        secondNode.innerHTML = countSec;
+      }
+      // 如果秒数为0
+      if(countSec === 0) {
+        // 如果分钟数为0
+        if (countMin === 0) {
+          // 如果小时数为0停止计时器
+          if (countHour === 0) {
+            clearInterval(intervalId);
+          // 如果小时数不为0
+          } else {
+            countSec = 60;
+            secondNode.innerHTML = countSec;
+            countMin = 59;
+            minuteNode.innerHTML = countMin;
+            countHour--;
+            if (countHour < 10) {
+              hourNode.innerHTML = "0" + countHour;
+            } else {
+              hourNode.innerHTML = countHour;
+            }
+          }
+        // 如果分钟数不为0
+        } else {
+          countSec = 60;
+          secondNode.innerHTML = countSec;
+          countMin--;
+          if (countMin < 10) {
+            minuteNode.innerHTML = "0" + countMin;
+          } else {
+            minuteNode.innerHTML = countMin;
+          }
+        }
+      }
+    }, 1000);
+
+
+  </script>
+</body>
+</html>

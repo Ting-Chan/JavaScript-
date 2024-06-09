@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>通过用户输入创建列表</h1>
+  <ul></ul>
+  <script>
+    do {
+      var input = prompt("请输要插入的内容");
+      if(input) {
+        let ul = document.querySelector("ul");
+        let li = document.createElement("li");
+        li.innerHTML = input;
+        ul.appendChild(li);
+      }
+    } while(input)
+  </script>
+</body>
+</html> 
