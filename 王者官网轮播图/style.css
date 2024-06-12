@@ -1,0 +1,53 @@
+.carousel-container {
+  width: 605px;
+  height: 342px;
+  margin: 100px auto 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-container {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #000;
+}
+
+.carousel-container .button-container .button{
+  width: 120px;
+  height: 44px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 44px;
+  color: #fff;
+}
+
+.carousel-container .button-container .button-active {
+  color: orange;
+} 
+
+.carousel-container .button-container .button:hover {
+  cursor: pointer;
+  color: orange;
+}
+
+.carousel-container .img-wrapper {
+  position: relative;
+  display: flex;
+  width: 2420px;
+  height: 100% - 44px;
+}
+
+.carousel-container .img-wrapper img {
+  position: absolute;
+  width: 605px;
+  height: 298px;
+  left: 605px;
+  transition: left 100ms linear;
+}
+
+.carousel-container .img-wrapper img:first-child {
+  left: 0;
+}
