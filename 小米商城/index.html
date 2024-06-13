@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <title>小米官网</title>
+
+  <style>
+    .topbar {
+      font-size: 12px;
+      background-color: #333333;
+    }
+
+    .topbar a {
+      color: #b0b0b0;
+    }
+
+    .topbar-nav a:hover, .userinfo a:hover {
+      color: #fff;
+    }
+  
+    .topbar > .main-wrapper {
+      display: flex;
+      line-height: 40px;
+      justify-content: space-between;
+    }
+
+    .topbar-nav > .nav-item {
+      display: inline-block;
+    }
+
+    .topbar-nav > .nav-item.download {
+      position: relative;
+    }
+
+    .topbar-nav > .download > .triangle {
+      position: absolute;
+      width: 0;
+      height: 0;
+      bottom: 0px;
+      left: 20px;
+      border: 5px solid transparent;
+      border-bottom-color: #fff;
+      visibility: hidden;
+    }
+
+    .topbar-nav > .nav-item .mi-app {
+      position: absolute;
+      width: 155px;
+      height: 185px;
+      left: -54px;
+      bottom: 0px;
+      font-size: 16px;
+      line-height: 20px;
+      color: #424242;
+      text-align: center;
+      background-color: #fff;
+      box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+      transition: bottom 0.2s linear;
+      z-index: -1;
+    }
+
+    .topbar-nav > .nav-item .mi-app img {
+      display: block;
+      width: 90px;
+      height: 90px;
+      margin: 30px auto 10px;
+    }
+
+    .topbar-nav > .download:hover .mi-app {
+      bottom: -185px;
+    }
+
+    .topbar-nav > .download:hover .triangle {
+      visibility: visible;
+    }
+
+    .topbar .gap {
+      color: #42423d;
+      padding: 0px 3px;
+    }
+
+    .topbar .shopcar {
+      position: relative;
+      text-align: center;
+    }
+
+    .topbar .shopcar a {
+      display: block;
+      width: 120px;
+    }
+
+    .topbar .shopcar > .shopcar-detail {
+      position: absolute;
+      width: 400px;
+      line-height: 125px;
+      right: 0px;
+      bottom: 0px;
+      color: #424242;
+      z-index: -100;
+      transition: bottom 0.4s linear;
+      /* background-color: #fff; */
+    }
+    
+    .topbar .shopcar a:hover {
+      color: #ff7113;
+      background-color: #fff;
+    }
+
+    .topbar .shopcar a:hover + .shopcar-detail {
+      bottom: -125px;
+      box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+      transition: bottom 0.4s linear;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="topbar">
+      <div class="main-wrapper">
+        <div class="topbar-nav">
+          <a class="nav-item" href="">小米官网</a>
+          <span class="gap"> | </span>
+          <a class="nav-item" href="">小米商城</a>
+          <span class="gap"> | </span>
+          <a class="nav-item" href="">小米澎湃OS</a>
+          <span class="gap"> | </span>
+          <a class="nav-item" href="">小米汽车</a>
+          <span class="gap"> | </span>
+          <a class="nav-item" href="">云服务</a>
+          <span class="gap"> | </span>
+          <a class="nav-item" href="">IoT</a>
+          <span class="gap"> | </span>
+          <a class="nav-item" href="">有品</a>
+          <span class="gap"> | </span>
+          <a class="nav-item" href="">小爱开发平台</a>
+          <span class="gap"> | </span>
+          <a class="nav-item" href="">资质证照</a>
+          <span class="gap"> | </span>
+          <a class="nav-item" href="">协议规则</a>
+          <span class="gap"> | </span>
+          <a class="nav-item download" href="">下载app
+            <div class="triangle"></div>
+            <div class="mi-app">
+              <img src="./img/download.png" alt="">
+              小米商城APP
+            </div>
+          </a>
+          <span class="gap"> | </span>
+          <a class="nav-item" href="">Selcet Location</a>
+        </div>
+        <div class="userinfo">
+          <a href="">登录</a>
+          <span class="gap"> | </span>
+          <a href="">注册</a>
+          <span class="gap"> | </span>
+          <a href="">消息通知</a>
+        </div>
+        <div class="shopcar">
+          <a class="shopcar" href="">购物车</a>
+          <div class="shopcar-detail">购物车中还没有商品，赶紧选购吧！</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottombar"></div>
+  </div>
+</body>
+</html>
