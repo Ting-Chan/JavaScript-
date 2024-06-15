@@ -1,4 +1,12 @@
 .main-wrapper {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
   width: 1226px;
   margin: 0 auto;
+  color: #333333;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
