@@ -57,6 +57,7 @@
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   transition: height 0.3s linear;
   overflow: hidden;
+  z-index: 100;
 }
 
 .topbar-nav > .nav-item .mi-app img {
@@ -80,29 +81,16 @@
 }
 
 .topbar .shopcar {
-  position: relative;
   float: right;
   margin-left: 15px;
   text-align: center;
-  background-color: #424242;
 }
 
 .topbar .shopcar a {
   display: block;
+  position: relative;
   width: 120px;
-}
-
-.topbar .shopcar > .shopcar-detail {
-  position: absolute;
-  width: 400px;
-  height: 0px;
-  line-height: 125px;
-  right: 0px;
-  top: 40px;
-  color: #424242;
-  background-color: #fff;
-  overflow: hidden;
-  transition: height 0.4s linear;
+  background-color: #424242;
 }
 
 .topbar .shopcar a:hover {
@@ -110,16 +98,29 @@
   background-color: #fff;
 }
 
-.topbar .shopcar a:hover + .shopcar-detail {
-  height: 125px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+.topbar .shopcar .shopcar-detail {
+  position: absolute;
+  width: 400px;
+  height: 0px;
+  line-height: 100px;
+  right: 0px;
+  top: 40px;
+  color: #424242;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
+  transition: height 0.3s linear;
+  z-index: 100;
+}
+
+.topbar .shopcar a:hover .shopcar-detail {
+  height: 100px;
 }
 
 .bottombar .main-wrapper {
   display: flex;
   align-items: center;
   height: 100px;
-  overflow: auto;
 }
 
 .bottombar .main-wrapper .logo a {

@@ -1,0 +1,45 @@
+.main {
+  height: 460px;
+}
+
+.main .swiper-container {
+  position: relative;
+  background-color: lightcyan;
+}
+
+.main .category {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  box-sizing: border-box;
+  width: 234px;
+  height: 460px;
+  padding: 20px 0;
+  background-color: rgba(105,101,101,.6);
+}
+
+.main .category .item {
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-right: 20px;
+  line-height: 42px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.main .category .item:hover {
+  background-color: #ff7113;
+  cursor: pointer;
+}
+
+.main .category .item .right-align {
+  float: right;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.main .swiper-container .swiper .swiper-img {
+  width: 100%;
+  height: 100%;
+}

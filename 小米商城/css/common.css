@@ -1,5 +1,8 @@
-.main-wrapper {
+body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+
+.main-wrapper {
   width: 1226px;
   margin: 0 auto;
   color: #333333;
