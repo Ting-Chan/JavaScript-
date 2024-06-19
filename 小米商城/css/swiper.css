@@ -1,13 +1,11 @@
-.main {
-  height: 460px;
-}
-
-.main .swiper-container {
+.swiper-container {
   position: relative;
+  height: 460px;
+  font-size: 14px;
   background-color: lightcyan;
 }
 
-.main .category {
+.swiper-container .category {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -18,28 +16,89 @@
   background-color: rgba(105,101,101,.6);
 }
 
-.main .category .item {
+.swiper-container .category .item {
   box-sizing: border-box;
   padding-left: 30px;
   padding-right: 20px;
   line-height: 42px;
-  font-size: 14px;
   color: #fff;
 }
 
-.main .category .item:hover {
-  background-color: #ff7113;
-  cursor: pointer;
-}
-
-.main .category .item .right-align {
+.swiper-container .category .item .right-align {
   float: right;
   font-size: 14px;
   font-weight: bold;
   text-align: right;
 }
 
-.main .swiper-container .swiper .swiper-img {
+.swiper-container .category .item:hover {
+  background-color: #ff7113;
+  cursor: pointer;
+}
+
+.swiper-container .category-detail {
+  display: none;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 234px;
+  height: 460px;
+  padding: 2px 0;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  box-shadow: 3px 8px 16px rgba(0, 0, 0, .18);
+}
+
+.swiper-container .category-detail.column2 {
+  width: 530px;
+}
+
+.swiper-container .category-detail.column3 {
+  width: 795px;
+}
+
+.swiper-container .category-detail.column4 {
+  width: 992px;
+}
+
+.swiper-container .category .item:hover .category-detail {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.swiper-container .category-detail.column2 li, .swiper-container .category-detail.column3 li {
+  width: 265px;
+  height: 75px;
+}
+
+.swiper-container .category-detail.column4 li {
+  width: 248px;
+  height: 75px;
+}
+
+.swiper-container .category-detail li a {
+  display: block;
+  box-sizing: border-box;
+  line-height: 75px;
+  padding: 0 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.swiper-container .category-detail li a img {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.swiper-container .category-detail li a:hover {
+  color: #ff7113;
+}
+
+.swiper-container .swiper .swiper-img {
   width: 100%;
   height: 100%;
 }

@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 鼠标移入响应
   buttonContainer.addEventListener("mouseover", function (event) {
+    console.log("mouseover");
     // 判断按钮区域
     if (event.target.classList.contains("button")) {
       const index = parseInt(event.target.getAttribute("key"));
