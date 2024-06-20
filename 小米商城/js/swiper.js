@@ -51,7 +51,3 @@ pagination.addEventListener("click", function (event) {
     updateActive(currentIndex, newIndex);
   }
 })
-
-
-
-
