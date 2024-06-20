@@ -1,6 +1,6 @@
 @font-face {
   font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1718543120560') format('truetype');
+  src: url('iconfont.ttf?t=1718867946417') format('truetype');
 }
 
 .iconfont {
@@ -25,6 +25,14 @@
 
 .icon-didian:before {
   content: "\e61c";
+}
+
+.icon-youjiantou1:before {
+  content: "\e633";
+}
+
+.icon-zuojiantou:before {
+  content: "\e635";
 }
 
 .icon-libao:before {
@@ -53,10 +61,6 @@
 
 .icon-user:before {
   content: "\e683";
-}
-
-.icon-arrow-right-bold:before {
-  content: "\e687";
 }
 
 .icon-cart-empty:before {

@@ -2,7 +2,6 @@
   position: relative;
   height: 460px;
   font-size: 14px;
-  background-color: lightcyan;
 }
 
 .swiper-container .category {
@@ -14,6 +13,7 @@
   height: 460px;
   padding: 20px 0;
   background-color: rgba(105,101,101,.6);
+  z-index: 1;
 }
 
 .swiper-container .category .item {
@@ -98,7 +98,103 @@
   color: #ff7113;
 }
 
-.swiper-container .swiper .swiper-img {
+.swiper-container .swiper .left-arrow {
+  position: absolute;
+  width: 40px;
+  height: 70px;
+  left: 234px;
+  top: 50%;
+  margin-top: -35px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.swiper-container .swiper .right-arrow {
+  position: absolute;
+  width: 40px;
+  height: 70px;
+  right: 0;
+  top: 50%;
+  margin-top: -35px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.swiper-container .swiper .left-arrow a,
+.swiper-container .swiper .right-arrow a {
+  display: block;
   width: 100%;
   height: 100%;
+}
+
+.swiper-container .swiper .left-arrow a.disable,
+.swiper-container .swiper .right-arrow a.disable {
+  pointer-events: none;
+}
+
+.swiper-container .swiper .left-arrow:hover,
+.swiper-container .swiper .right-arrow:hover {
+  color: #fff !important;
+  background-color: rgba(0,0,0, 0.6);
+}
+
+.swiper-container .swiper .left-arrow .iconfont, 
+.swiper-container .swiper .right-arrow .iconfont {
+  font-size: 30px;
+  line-height: 70px;
+  color: #d2d2d2;
+}
+
+.swiper-container .swiper .pagination {
+  position: absolute;
+  display: flex;
+  right: 30px;
+  bottom: 20px;
+  width: 100px;
+  justify-content: space-between;
+}
+
+.swiper-container .swiper .pagination li {
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  border: 2px solid hsla(0,0%,100%,.3);
+  background: rgba(0,0,0,.4);
+}
+
+.swiper-container .swiper .pagination li.active {
+  background: hsla(0,0%,100%,.3);
+  border-color: rgba(0,0,0,.4);
+}
+
+.swiper-container .swiper .pagination li:hover {
+  cursor: pointer;
+  background: hsla(0,0%,100%,.3);
+  border-color: rgba(0,0,0,.4);
+}
+
+.swiper-container .swiper .swiper-list {
+  position: relative;
+  width: 100%;
+  height: 460px;
+}
+
+.swiper-container .swiper .swiper-list li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.swiper-container .swiper .swiper-list li img {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-container .swiper .swiper-list li.active {
+  opacity: 1;
 }
