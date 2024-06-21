@@ -1,4 +1,4 @@
-body, p {
+body, p, h2, h3, a {
   margin: 0;
   padding: 0;
 }
@@ -22,4 +22,9 @@ input, button {
   background: none;
   font-size: inherit;
   font-family: inherit;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: normal;
 }
