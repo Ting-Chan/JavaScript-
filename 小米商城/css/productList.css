@@ -1,33 +1,33 @@
-.product-list {
+.product-area {
   background-color: #f5f5f5;
 }
 
-.product-list .ADbanner {
+.product-area .ad-banner {
   padding: 22px 0;
 }
 
-.product-list img {
+.product-area .ad-banner img {
   width: 100%;
   height: 120px;
 }
 
-.product-list .list-container {
+.product-area .product-list {
   margin-bottom: 8px;
 }
 
-.product-list .list-container .head {
+.product-area .product-list .head {
   position: relative;
   height: 58px;
 }
 
-.product-list .list-container .head .title {
+.product-area .product-list .head .title {
   font-size: 22px;
   font-weight: 200;
   color: #333;
   line-height: 58px;
 }
 
-.product-list .list-container.phone .head .more {
+.product-area .product-list.phone .head .more {
   position: absolute;
   top: 0;
   right: 0;
@@ -39,15 +39,15 @@
   transition: color 0.1s linear;
 }
 
-.product-list .list-container .head .more:hover {
+.product-area .product-list .head .more:hover {
   color: var(--theme-color);
 }
 
-.product-list .list-container .head .more:hover .iconfont {
+.product-area .product-list .head .more:hover .iconfont {
   background-color: var(--theme-color);
 }
 
-.product-list .list-container .head .more .iconfont {
+.product-area .product-list .head .more .iconfont {
   display: inline-block;
   margin-left: 10px;
   width: 20px;
@@ -62,18 +62,18 @@
   transition: background-color 0.1s linear;
 }
 
-.product-list .list-container .head .more span {
+.product-area .product-list .head .more span {
   vertical-align: middle;
 }
 
-.product-list .list {
+.product-area .list {
   width: 1240px;
   height: 628px;
   margin-left: -14px;
 }
 
 
-.product-list .list .item {
+.product-area .list .item {
   width: 234px;
   margin: 0 0 14px 14px;
   float: left;
@@ -81,26 +81,26 @@
   background-color: #fff;
 }
 
-.product-list .list .item:hover {
+.product-area .list .item:hover {
   box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
 }
 
-.product-list .list .item a {
+.product-area .list .item a {
   display: block;
 }
 
-.product-list .list .big {
+.product-area .list .big {
   height: 614px;
 }
 
-.product-list .list .middle {
+.product-area .list .middle {
   box-sizing: border-box;
   height: 300px;
   padding: 20px 0;
   text-align: center;
 }
 
-.product-list .list .small {
+.product-area .list .small {
   box-sizing: border-box;
   padding: 32px 20px;
   height: 143px;
@@ -108,19 +108,19 @@
   text-align: center;
 }
 
-.product-list .list .big img {
+.product-area .list .big img {
   width: 100%;
   height: 100%;
   margin-bottom: 18px;
 }
 
-.product-list .list .middle img {
+.product-area .list .middle img {
   width: 160px;
   height: 160px;
   margin-bottom: 18px;
 }
 
-.product-list .list .middle .title {
+.product-area .list .middle .title {
   margin: 0 20px 10px;
   font-size: 14px;
   font-weight: 400;
@@ -129,7 +129,7 @@
   overflow: hidden;
 }
 
-.product-list .list .middle .desc {
+.product-area .list .middle .desc {
   margin: 0 20px 10px;
   font-size: 12px;
   color: #b0b0b0;
@@ -138,16 +138,16 @@
   overflow: hidden;
 }
 
-.product-list .list .middle .price {
+.product-area .list .middle .price {
   margin: 0 20px 10px;
   font-size: 14px;
 }
 
-.product-list .list .middle .price .now {
+.product-area .list .middle .price .now {
   color: var(--theme-color);
 }
 
-.product-list .list .small .info {
+.product-area .list .small .info {
   position: relative;
   width: 114px;
   height: 100%;
@@ -155,40 +155,40 @@
   text-align: left;
 }
 
-.product-list .list .small .info .title{
+.product-area .list .small .info .title{
   position: absolute;
   top: 0;
   left: 0;
   font-weight: 400;
 }
 
-.product-list .list .small .info .price {
+.product-area .list .small .info .price {
   position: absolute;
   bottom: 0;
   left: 0;
   color: var(--theme-color);
 }
 
-.product-list .list .small.top  a {
+.product-area .list .small.top  a {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.product-list .list .small.top img {
+.product-area .list .small.top img {
   width: 80px;
   height: 80px;
   float: right;
 }
 
-.product-list .list .small.bottom a {
+.product-area .list .small.bottom a {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.product-list .list .small.bottom .iconfont {
+.product-area .list .small.bottom .iconfont {
   position: absolute;
   right: 0;
   top: 50%;
@@ -197,7 +197,7 @@
   color: var(--theme-color);
 }
 
-.product-list .list .small.bottom .desc {
+.product-area .list .small.bottom .desc {
   position: absolute;
   text-align: left;
   left: 0;
@@ -205,16 +205,16 @@
   margin-top: -20px;
 }
 
-.product-list .list .small.bottom .desc .more{
+.product-area .list .small.bottom .desc .more{
   font-size: 18px;
 }
 
-.product-list .list .small.bottom .desc .category {
+.product-area .list .small.bottom .desc .category {
   font-size: 12px;
   color: #757575;
 }
 
-.product-list .list-container .head .category {
+.product-area .product-list .head .category {
   display: flex;
   align-items: center;
   position: absolute;
@@ -223,7 +223,7 @@
   height: 100%;
 }
 
-.product-list .list-container .head .category .item{
+.product-area .product-list .head .category .item{
   box-sizing: border-box;
   font-size: 16px;
   margin-left: 30px;
@@ -233,7 +233,7 @@
   transition: border-bottom-color 0.3s linear;
 }
 
-.product-list .list-container .head .category .item:hover {
+.product-area .product-list .head .category .item:hover {
   color: var(--theme-color);
   border-bottom-color: var(--theme-color);
 }

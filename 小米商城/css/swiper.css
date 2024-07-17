@@ -1,9 +1,9 @@
-.swiper-container {
+.swiper-area {
   position: relative;
   font-size: 14px;
 }
 
-.swiper-container .category {
+.swiper-area .category {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -15,7 +15,7 @@
   z-index: 1;
 }
 
-.swiper-container .category .item {
+.swiper-area .category .item {
   box-sizing: border-box;
   padding-left: 30px;
   padding-right: 20px;
@@ -23,19 +23,19 @@
   color: #fff;
 }
 
-.swiper-container .category .item .right-align {
+.swiper-area .category .item .right-align {
   float: right;
   font-size: 12px;
   font-weight: bold;
   text-align: right;
 }
 
-.swiper-container .category .item:hover {
+.swiper-area .category .item:hover {
   background-color: #ff7113;
   cursor: pointer;
 }
 
-.swiper-container .category-detail {
+.swiper-area .category-detail {
   display: none;
   box-sizing: border-box;
   position: absolute;
@@ -48,35 +48,35 @@
   box-shadow: 3px 8px 16px rgba(0, 0, 0, .18);
 }
 
-.swiper-container .category-detail.column2 {
+.swiper-area .category-detail.column2 {
   width: 530px;
 }
 
-.swiper-container .category-detail.column3 {
+.swiper-area .category-detail.column3 {
   width: 795px;
 }
 
-.swiper-container .category-detail.column4 {
+.swiper-area .category-detail.column4 {
   width: 992px;
 }
 
-.swiper-container .category .item:hover .category-detail {
+.swiper-area .category .item:hover .category-detail {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
-.swiper-container .category-detail.column2 li, .swiper-container .category-detail.column3 li {
+.swiper-area .category-detail.column2 li, .swiper-area .category-detail.column3 li {
   width: 265px;
   height: 75px;
 }
 
-.swiper-container .category-detail.column4 li {
+.swiper-area .category-detail.column4 li {
   width: 248px;
   height: 75px;
 }
 
-.swiper-container .category-detail li a {
+.swiper-area .category-detail li a {
   display: block;
   box-sizing: border-box;
   line-height: 75px;
@@ -86,18 +86,18 @@
   white-space: nowrap;
 }
 
-.swiper-container .category-detail li a img {
+.swiper-area .category-detail li a img {
   width: 40px;
   height: 40px;
   margin-right: 12px;
   vertical-align: middle;
 }
 
-.swiper-container .category-detail li a:hover {
+.swiper-area .category-detail li a:hover {
   color: #ff7113;
 }
 
-.swiper-container .swiper .left-arrow {
+.swiper-area .swiper .left-arrow {
   position: absolute;
   width: 40px;
   height: 70px;
@@ -108,7 +108,7 @@
   cursor: pointer;
 }
 
-.swiper-container .swiper .right-arrow {
+.swiper-area .swiper .right-arrow {
   position: absolute;
   width: 40px;
   height: 70px;
@@ -119,32 +119,32 @@
   cursor: pointer;
 }
 
-.swiper-container .swiper .left-arrow a,
-.swiper-container .swiper .right-arrow a {
+.swiper-area .swiper .left-arrow a,
+.swiper-area .swiper .right-arrow a {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.swiper-container .swiper .left-arrow a.disable,
-.swiper-container .swiper .right-arrow a.disable {
+.swiper-area .swiper .left-arrow a.disable,
+.swiper-area .swiper .right-arrow a.disable {
   pointer-events: none;
 }
 
-.swiper-container .swiper .left-arrow:hover,
-.swiper-container .swiper .right-arrow:hover {
+.swiper-area .swiper .left-arrow:hover,
+.swiper-area .swiper .right-arrow:hover {
   color: #fff !important;
   background-color: rgba(0,0,0, 0.6);
 }
 
-.swiper-container .swiper .left-arrow .iconfont, 
-.swiper-container .swiper .right-arrow .iconfont {
+.swiper-area .swiper .left-arrow .iconfont, 
+.swiper-area .swiper .right-arrow .iconfont {
   font-size: 30px;
   line-height: 70px;
   color: #d2d2d2;
 }
 
-.swiper-container .swiper .pagination {
+.swiper-area .swiper .pagination {
   position: absolute;
   display: flex;
   right: 30px;
@@ -153,7 +153,7 @@
   justify-content: space-between;
 }
 
-.swiper-container .swiper .pagination li {
+.swiper-area .swiper .pagination li {
   box-sizing: border-box;
   width: 10px;
   height: 10px;
@@ -162,28 +162,28 @@
   background: rgba(0,0,0,.4);
 }
 
-.swiper-container .swiper .pagination li.active {
+.swiper-area .swiper .pagination li.active {
   background: hsla(0,0%,100%,.3);
   border-color: rgba(0,0,0,.4);
 }
 
-.swiper-container .swiper .pagination li:hover {
+.swiper-area .swiper .pagination li:hover {
   cursor: pointer;
   background: hsla(0,0%,100%,.3);
   border-color: rgba(0,0,0,.4);
 }
 
-.swiper-container .swiper {
+.swiper-area .swiper {
   position: relative;
 }
 
-.swiper-container .swiper .swiper-list {
+.swiper-area .swiper .swiper-list {
   position: relative;
   width: 100%;
   height: 460px;
 }
 
-.swiper-container .swiper .swiper-list li {
+.swiper-area .swiper .swiper-list li {
   position: absolute;
   top: 0;
   left: 0;
@@ -193,12 +193,12 @@
   transition: opacity 0.5s linear;
 }
 
-.swiper-container .swiper .swiper-list li img {
+.swiper-area .swiper .swiper-list li img {
   width: 100%;
   height: 100%;
 }
 
-.swiper-container .swiper .swiper-list li.active {
+.swiper-area .swiper .swiper-list li.active {
   opacity: 1;
 }
 

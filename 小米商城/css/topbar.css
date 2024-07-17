@@ -7,7 +7,7 @@
   color: #b0b0b0;
 }
 
-.topbar > .main-wrapper {
+.topbar .main-wrapper {
   line-height: 40px;
   justify-content: space-between;
 }
@@ -16,7 +16,7 @@
   float: left;
 }
 
-.topbar-nav > .nav-item {
+.topbar-nav .nav-item {
   display: inline-block;
 }
 
@@ -28,11 +28,11 @@
   color: #fff;
 }
 
-.topbar-nav > .nav-item.download {
+.topbar-nav .nav-item.download {
   position: relative;
 }
 
-.topbar-nav > .download > .triangle {
+.topbar-nav .download .triangle {
   position: absolute;
   width: 0;
   height: 0;
@@ -43,7 +43,7 @@
   visibility: hidden;
 }
 
-.topbar-nav > .nav-item .mi-app {
+.topbar-nav .nav-item .mi-app {
   position: absolute;
   width: 155px;
   height: 0;
@@ -60,18 +60,18 @@
   z-index: 100;
 }
 
-.topbar-nav > .nav-item .mi-app img {
+.topbar-nav .nav-item .mi-app img {
   display: block;
   width: 90px;
   height: 90px;
   margin: 30px auto 10px;
 }
 
-.topbar-nav > .download:hover .mi-app {
+.topbar-nav .download:hover .mi-app {
   height: 185px;
 }
 
-.topbar-nav > .download:hover .triangle {
+.topbar-nav .download:hover .triangle {
   visibility: visible;
 }
 
@@ -211,16 +211,17 @@
   z-index: 100;
 }
 
-.bottombar .nav-menu.show {
+.bottombar .nav-menu.border {
   border-top: 1px solid #e0e0e0;
+}
+
+.bottombar .nav-menu.show {
   height: 230px;
 }
 
 .bottombar .nav-menu:hover {
-  border-top: 1px solid #e0e0e0;
   height: 230px;
 }
-
 
 .bottombar .nav-menu .main-wrapper {
   display: flex;
