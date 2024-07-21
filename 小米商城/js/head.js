@@ -15,7 +15,6 @@ shopcar.addEventListener("mouseleave", function (event) {
 
 bottomNav.addEventListener("mouseover", function (event) {
   if (event.target.classList.contains("product")) {
-    console.log(1);
     bottomNavMenu.classList.add("show");
     bottomNavMenu.classList.add("border");
   } else {
@@ -28,9 +27,7 @@ bottomNav.addEventListener("mouseleave", function (event) {
 })
 
 bottomNavMenu.addEventListener("transitionend", function (event) {
-  console.log("zhixing");
   const height = window.getComputedStyle(bottomNavMenu).getPropertyValue("height");
-  console.log(height);
   if(height === "0px") {
     bottomNavMenu.classList.remove("border");
   }

@@ -1,5 +1,6 @@
 .product-area {
   background-color: #f5f5f5;
+  padding-bottom: 12px;
 }
 
 .product-area .ad-banner {
@@ -233,7 +234,7 @@
   transition: border-bottom-color 0.3s linear;
 }
 
-.product-area .product-list .head .category .item:hover {
+.product-area .product-list .head .category .item:hover, .product-area .product-list .head .category .item.active {
   color: var(--theme-color);
   border-bottom-color: var(--theme-color);
 }

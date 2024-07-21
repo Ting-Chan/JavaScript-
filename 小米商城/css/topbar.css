@@ -1,38 +1,38 @@
-.topbar {
+.header-area .topbar {
   font-size: 12px;
   background-color: #333333;
 }
 
-.topbar a {
+.header-area .topbar a {
   color: #b0b0b0;
 }
 
-.topbar .main-wrapper {
+.header-area .topbar .main-wrapper {
   line-height: 40px;
   justify-content: space-between;
 }
 
-.topbar .topbar-nav {
+.header-area .topbar .topbar-nav {
   float: left;
 }
 
-.topbar-nav .nav-item {
+.header-area .topbar-nav .nav-item {
   display: inline-block;
 }
 
-.topbar .userinfo {
+.header-area .topbar .userinfo {
   float: right;
 }
 
-.topbar-nav a:hover, .userinfo a:hover {
+.header-area .topbar-nav a:hover, .userinfo a:hover {
   color: #fff;
 }
 
-.topbar-nav .nav-item.download {
+.header-area .topbar-nav .nav-item.download {
   position: relative;
 }
 
-.topbar-nav .download .triangle {
+.header-area .topbar-nav .download .triangle {
   position: absolute;
   width: 0;
   height: 0;
@@ -43,7 +43,7 @@
   visibility: hidden;
 }
 
-.topbar-nav .nav-item .mi-app {
+.header-area .topbar-nav .nav-item .mi-app {
   position: absolute;
   width: 155px;
   height: 0;
@@ -60,46 +60,46 @@
   z-index: 100;
 }
 
-.topbar-nav .nav-item .mi-app img {
+.header-area .topbar-nav .nav-item .mi-app img {
   display: block;
   width: 90px;
   height: 90px;
   margin: 30px auto 10px;
 }
 
-.topbar-nav .download:hover .mi-app {
+.header-area .topbar-nav .download:hover .mi-app {
   height: 185px;
 }
 
-.topbar-nav .download:hover .triangle {
+.header-area .topbar-nav .download:hover .triangle {
   visibility: visible;
 }
 
-.topbar .gap {
+.header-area .topbar .gap {
   color: #42423d;
   padding: 0px 3px;
 }
 
-.topbar .shopcar {
+.header-area .topbar .shopcar {
   float: right;
   margin-left: 15px;
   text-align: center;
   vertical-align: bottom;
 }
 
-.topbar .shopcar a {
+.header-area .topbar .shopcar a {
   display: block;
   position: relative;
   width: 120px;
   background-color: #424242;
 }
 
-.topbar .shopcar a.active {
+.header-area .topbar .shopcar a.active {
   color: #ff7113;
   background-color: #fff;
 }
 
-.topbar .shopcar .shopcar-detail {
+.header-area .topbar .shopcar .shopcar-detail {
   position: absolute;
   width: 400px;
   height: 0px;
@@ -114,21 +114,21 @@
   z-index: 100;
 }
 
-.topbar .shopcar a:hover .shopcar-detail {
+.header-area .topbar .shopcar a:hover .shopcar-detail {
   height: 100px;
 }
 
-.bottombar {
+.header-area .bottombar {
   position: relative;
 }
 
-.bottombar .main-wrapper {
+.header-area .bottombar .main-wrapper {
   display: flex;
   align-items: center;
   height: 100px;
 }
 
-.bottombar .main-wrapper .logo a {
+.header-area .bottombar .main-wrapper .logo a {
   display: block;
   width: 56px;
   height: 56px;
@@ -137,31 +137,31 @@
   background-size: contain;
 }
 
-.bottombar .bottombar-nav {
+.header-area .bottombar .bottombar-nav {
   display: flex;
   width: 856px;
   height: 100px;
 }
 
-.bottombar .bottombar-nav {
+.header-area .bottombar .bottombar-nav {
   margin-left: 180px;
 }
 
-.bottombar .bottombar-nav .nav-item a{
+.header-area .bottombar .bottombar-nav .nav-item a{
   display: block;
   padding: 0 10px;
   line-height: 100px;
 }
 
-.bottombar .bottombar-nav .nav-item a:hover {
+.header-area .bottombar .bottombar-nav .nav-item a:hover {
   color: #ff7113;
 }
 
-.bottombar .search-form {
+.header-area .bottombar .search-form {
   display: flex;
 }
 
-.bottombar .search-form .search-text {
+.header-area .bottombar .search-form .search-text {
   box-sizing: border-box;
   width: 245px;
   height: 50px;
@@ -171,7 +171,7 @@
   border-right: none;
 }
 
-.bottombar .search-form .search-button {
+.header-area .bottombar .search-form .search-button {
   box-sizing: border-box;
   width: 52px;
   height: 50px;
@@ -179,26 +179,26 @@
   transition: background-color 0.2s linear;
 }
 
-.bottombar .search-form .search-button .iconfont{
+.header-area .bottombar .search-form .search-button .iconfont{
   font-size: 18px;
   font-weight: 900;
 }
 
-.bottombar .search-form .search-button:hover {
+.header-area .bottombar .search-form .search-button:hover {
   background-color: #ff7113;
   border-color: #ff7113!important;
   color: #fff;
 }
 
-.bottombar .search-form:hover .search-button, .bottombar .search-form:hover .search-text{
+.header-area .bottombar .search-form:hover .search-button, .bottombar .search-form:hover .search-text{
   border-color: #b0b0b0;
 }
 
-.bottombar .search-form .search-text:focus, .bottombar .search-form .search-text:focus + .search-button{
+.header-area .bottombar .search-form .search-text:focus, .bottombar .search-form .search-text:focus + .search-button{
   border-color: #ff7113;
 }
 
-.bottombar .nav-menu {
+.header-area .bottombar .nav-menu {
   position: absolute;
   top: 100px;
   left: 0;
@@ -211,29 +211,29 @@
   z-index: 100;
 }
 
-.bottombar .nav-menu.border {
+.header-area .bottombar .nav-menu.border {
   border-top: 1px solid #e0e0e0;
 }
 
-.bottombar .nav-menu.show {
+.header-area .bottombar .nav-menu.show {
   height: 230px;
 }
 
-.bottombar .nav-menu:hover {
+.header-area .bottombar .nav-menu:hover {
   height: 230px;
 }
 
-.bottombar .nav-menu .main-wrapper {
+.header-area .bottombar .nav-menu .main-wrapper {
   display: flex;
   height: 230px;
 }
 
-.bottombar .nav-menu .item {
+.header-area .bottombar .nav-menu .item {
   position: relative;
   flex-grow: 1;
 }
 
-.bottombar .nav-menu .item a {
+.header-area .bottombar .nav-menu .item a {
   display: block;
   width: 180px;
   height: 166px;
@@ -241,23 +241,23 @@
   text-align: center;
 }
 
-.bottombar .nav-menu .item img {
+.header-area .bottombar .nav-menu .item img {
   width: 160px;
   height: 110px;
   margin-bottom: 16px;
 }
 
-.bottombar .nav-menu .item a p {
+.header-area .bottombar .nav-menu .item a p {
   font-size: 12px;
   line-height: 20px;
 }
 
-.bottombar .nav-menu .item a .price {
+.header-area .bottombar .nav-menu .item a .price {
   color: #ff7113;
 }
 
 
-.bottombar .nav-menu .separator::after {
+.header-area .bottombar .nav-menu .separator::after {
   position: absolute;
   top: 0;
   right: 0;
