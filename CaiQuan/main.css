@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #7596fd;
+}
+
+.head {
+  margin-top: 80px;
+  font-size: 35px;
+  font-weight: 900;
+  letter-spacing: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+
+.play-container, .result-container {
+  position: relative;
+  margin: 60px auto 0 auto;
+  width: 800px;
+  justify-content: space-between;
+  display: flex;
+  opacity: 1;
+  transition: opacity 1000ms ease;
+}
+
+.result-container {
+  display: none;
+}
+
+
+.play-container.hide, .result-container.hide {
+  opacity: 0;
+}
+
+.play-container .item {
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.play-container .rock {
+  background-image: url(./img/rock.svg);
+}
+
+.play-container .scissors {
+  background-image: url(./img/scissors.svg);
+}
+
+.play-container .paper {
+  background-image: url(./img/paper.svg);
+}
+
+.result-container .user, .result-container .computer {
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.result-container .promot {
+  line-height: 200px;
+  font-size: 28px;
+  letter-spacing: 5px;
+}
+
+.discript {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 10px;
+  color: #e3e3e3d5;
+}
