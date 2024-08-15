@@ -1,0 +1,67 @@
+.header {
+  background-color: #edeef0;
+  height: 220px;
+  overflow: auto;
+}
+
+.header .logo {
+  width: 160px;
+  height: 36px;
+  margin: 52px auto 28px auto;
+  background-image: url("https://cdn.weread.qq.com/web/wrweb-next/_nuxt/img_logo.Egsq9YBR.png");
+}
+
+.header .search-wrapper {
+  display: flex;
+  align-items: center;
+  width: 735px;
+  height: 52px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: #fff;
+}
+
+.header .search-wrapper .iconfont {
+  font-size: 20px;
+  font-weight: 600;
+  color: #9ca3ad;
+  vertical-align: middle;
+}
+
+.header .search-wrapper .icon-sousuo {
+  margin-right: 20px;
+}
+
+.header .search-wrapper .icon-fanhui {
+  margin-left: 20px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background-color: rgba(13,20,30,.04);
+  border-radius: 35px;
+  opacity: 0;
+  transition: opacity 100ms ease;
+}
+
+.header .search-wrapper .icon-fanhui.show {
+  opacity: 1;
+}
+
+.header .search-wrapper .search-input {
+  flex: 1;
+  line-height: 22px;
+  font-size: 16px;
+  border: 0;
+}
+
+.header .search-wrapper .search-input:focus {
+  outline: none;
+}
+
+.header .search-wrapper .search-input::placeholder {
+  color: #adb4be;
+  font-size: 16px;
+}
