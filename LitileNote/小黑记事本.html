@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小黑记事本</title>
+  <script src="./VUE.js"></script>
+</head>
+<style>
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaea;
+  }
+
+  .container {
+    width: 500px;
+    margin: 50px auto 0;
+  }
+
+  .container .title {
+    margin: 0;
+    line-height: 100px;
+    font-size: 28px;
+    font-weight: normal;
+    text-align: center;
+    color: #E9745B;
+  }
+
+  .container .main {
+    box-sizing: border-box;
+    width: 480px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .container .main .search-wrapper {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  .container .main .search-wrapper .search-input {
+    box-sizing: border-box;
+    padding-left: 10px;
+    flex-grow: 1;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    border-top: 2px solid #E9745B;
+    border-bottom: 2px solid #E9745B;
+    border-left: 2px solid #E9745B;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .container .main .search-wrapper .search-input::placeholder {
+    font-style: italic;
+    color: #eaeaea;
+  }
+
+  .container .main .search-wrapper .search-btn {
+    box-sizing: border-box;
+    width: 90px;
+    padding: 0;
+    border: 0;
+    color: #fff;
+    background-color: #E9745B;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .task-list {
+    margin-top: 20px 0;
+    list-style: none;
+    padding: 0;
+  }
+
+  .task-list .task-wrapper {
+    position: relative;
+    padding: 0 10px;
+    line-height: 40px;
+    font-size: 18px;
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .task-list .task-wrapper .order {
+    margin-right: 10px;
+  }
+
+  .task-list .task-wrapper .remove-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    border: 0;
+    font-weight: bold;
+    color: #E9745B;
+    background-color: #fff;
+    opacity: 0;
+    transition: opacity 100ms ease;
+  }
+
+  .task-list .task-wrapper:hover .remove-btn {
+    opacity: 1;
+  }
+
+  .task-list .task-wrapper .remove-btn:hover {
+    cursor: pointer;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    color: #999999;
+    font-size: 14px;
+  }
+
+  .footer .sum-wrapper .sum{
+    margin-left: 10px;
+  }
+
+  .footer .clean-btn {
+    border: none;
+    color: #999999;
+    background-color: #fff;
+  }
+
+  .footer .clean-btn:hover {
+    cursor: pointer;
+    color: #E9745B;
+  }
+
+</style>
+<body>
+  <div id="app">
+    <div class="container">
+      <h1 class="title">小黑记事本</h1>
+      <div class="main">
+        <div class="search-wrapper">
+          <input class="search-input" type="text" placeholder="请输入任务" v-model="task">
+          <button class="search-btn" type="button" @click="addTask">添加任务</button>
+        </div>
+        <ul class="task-list">
+          <template v-for="(item, index) in taskList" :key="item">
+            <li class="task-wrapper">
+              <span class="order">{{ index + 1 + "." }}</span>
+              <span class="task">{{ item }}</span>
+              <button class="remove-btn" @click="removeTask(index)">X</button>
+            </li>
+          </template>
+        </ul>
+        <div class="footer">
+          <div class="sum-wrapper">
+            <span>合计:</span>
+            <span class="sum">{{ taskList.length }}</span>
+          </div>
+          <button class="clean-btn" @click="cleanTasks">清空任务</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // 1. 创建Vue应用实例
+    const app = Vue.createApp({
+      // 根组件options
+      data() {
+        return {
+          task: "",
+          taskList: [],
+        }
+      },
+      methods: {
+        addTask() {
+          if (this.task !== "") {
+            this.taskList.push(this.task);
+            console.log(this.taskList);
+          }
+        },
+        removeTask(index) {
+          this.taskList.splice(index, 1);
+        },
+        cleanTasks() {
+          this.taskList = [];
+        }
+      }
+    })
+
+    // 2. 挂载Vue应用实例
+    app.mount("#app");
+  </script>  
+</body>
+</html>
