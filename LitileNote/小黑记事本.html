@@ -155,7 +155,7 @@
             </li>
           </template>
         </ul>
-        <div class="footer">
+        <div class="footer" v-if="isFooterShow">
           <div class="sum-wrapper">
             <span>合计:</span>
             <span class="sum">{{ taskList.length }}</span>
@@ -173,6 +173,11 @@
         return {
           task: "",
           taskList: [],
+        }
+      },
+      computed: {
+        isFooterShow() {
+          return this.taskList.length !== 0;
         }
       },
       methods: {
